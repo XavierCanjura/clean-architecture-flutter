@@ -1,4 +1,4 @@
-# structure_base
+# Clean Architecture Flutter
 
 This project is an example how to order the project folders using Clean Architecture
 
@@ -65,7 +65,7 @@ The `core` folder is a fundamental module housing key components like utils, rou
 
 ## Features
 
-`features` folder will contian all app features such as auth, profile, product..., and each feature of the application is built on the basis layers (Presentation, Domain, Data).
+`features` folder will contain all app features such as auth, profile, product..., and each feature of the application is built on the basis layers (Presentation, Domain, Data).
 
 ### 1. Presentacion Layer
 ---
@@ -88,7 +88,7 @@ the Domain Layer, also known as the business Logic or Use Case Layer, contains t
 ### Components
 
 - **Entities**: Represent the fundamental business objects or concepts.
-- **Use Cases**: Contian application-specific business rules and orchestrate the flow of data between entities. They are responsible for executing specific actions or operations.
+- **Use Cases**: Contain application-specific business rules and orchestrate the flow of data between entities. They are responsible for executing specific actions or operations.
 - **Repositories**: Abstract interfaces that define how data is accessed and stored.
 -- **Data Sources**: Define all the methods responsible for fetching data from the API or local database
 
@@ -104,3 +104,16 @@ The Data layer is responsible for interacting with external data sources, such a
 
 ## Shared
 Finally, the `shared` folder, it is like features folder but for common feature in our application, like payment feature, shared pages, shared widgets, abd othders."
+
+## WorkFlow
+```
+UI (Page)
+  ↓
+State Management (Riverpod, BloC, Provider, etc)
+  ↓
+UseCase (Business Rules)
+  ↓
+Repository (repository implementation)
+  ↓
+Datasource (external or local databases, APIs, services, etc)
+```
